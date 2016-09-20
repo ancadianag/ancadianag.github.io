@@ -5,10 +5,228 @@
 
 
   <body>
-    <h1>My homepage!</h1>
+    <h1>Welcome to my homepage, HATER!</h1>
     
     <h2>
-        ;)
+        <div class="container theme-showcase" role="main">
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC-全網站-RWD -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1147735435341531" data-ad-slot="9027393207" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	<script src="js/jquery.autogrowtextarea.js"></script>
+
+<style>
+
+.SiteInfo{
+	color:#fff;
+    font-family:"Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif;
+}
+
+.ItemInputDiv {
+	width: 400px;
+	float: right;
+}
+.ItemInput {
+	width:100%;
+}
+.ItemInput input[type="text"] {
+	width:100%;
+     box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+}
+.ItemInput textarea[type="text"] {
+	width:100%;
+}
+.ItemContent {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+</style>
+
+<h4>Unique Generator</h4>
+
+<table align="center" class="ItemGen">
+<tbody><tr>
+<td>
+<div class="ItemContainer">
+	<div class="ItemBox">
+		<div class="ItemContent">
+			<div class="TitleUniqueBar">
+				<div class="TitleUniqueBarL"></div>
+				<div class="TitleUniqueBarR"></div>
+				<div class="TextUnique">
+				<span class="ItemName">Hairdryer</span>
+				</div>
+				<div class="TextUnique">
+				<span class="ItemType">Eternal Sword</span>
+				</div>
+			</div>
+			<div class="ItemStats">One Handed Sword<br>Physical Damage: <span class="Default">63–104</span><br>Elemental Damage: <span class="FireDamage">28–40</span>, <span class="ColdDamage">28–40</span>, <span class="LightningDamage">1–70</span><br>Chaos Damage: <span class="ChaosDamage">28–40</span><br>Critical Strike Chance: <span class="Default">5%</span><br>Attacks per Second: <span class="Augmented">1.56</span></div>
+			<div class="ItemUniqueSeparator"></div>
+			<div class="Requirements">Requires Level <span class="Default">64</span>, <span class="Default">113</span> Str, <span class="Default">113</span> Dex</div>
+			<div class="ItemUniqueSeparator"></div>
+			<div class="ImplicitMod">18% Increased Accuracy Rating</div>
+			<div class="ItemUniqueSeparator"></div>
+			<div class="ExplicitMod">160% Increased Physical Damage<br>Adds 24-48 Fire Damage<br>Adds 1-96 Lightning Damage<br>20% Increased Attack Speed<br>+40% to Cold Resistance</div>
+			<div class="ItemUniqueSeparator"></div>
+			<div class="FlavourText">Babarians Hate<br> Wet Hair<br> At Any Time</div>
+			<div class="ItemImage">
+				<img class="ItemImageInside" src="http://webcdn.pathofexile.com/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/OneHandSword7Unique.png" style="width: 30%; height: 30%;" data-pin-nopin="true">
+			</div>
+			<div class="SiteInfo">poedb.tw/us/item-gen.php</div>
+		</div>
+	</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+<div class="ItemInputDiv">
+<form>
+<table class="ItemInput">
+<tbody><tr><td><input type="text" class="ItemName2" placeholder="ItemName">
+</td></tr><tr><td><input type="text" class="ItemType2" placeholder="ItemType">
+</td></tr><tr><td><textarea rows="6" type="text" class="ItemStats2" placeholder="ItemStats" style="overflow: hidden; resize: none; height: 125px;"></textarea>
+</td></tr><tr><td><div class="ItemUniqueSeparator"></div>
+</td></tr><tr><td><input type="text" class="Requirements2" placeholder="Requirements">
+</td></tr><tr><td><div class="ItemUniqueSeparator"></div>
+</td></tr><tr><td><input type="text" class="ImplicitMod2" placeholder="ImplicitMod">
+</td></tr><tr><td><div class="ItemUniqueSeparator"></div>
+</td></tr><tr><td><textarea rows="5" type="text" class="ExplicitMod2" placeholder="ExplicitMod" style="overflow: hidden; resize: none; height: 105px;"></textarea>
+</td></tr><tr><td><div class="ItemUniqueSeparator"></div>
+</td></tr><tr><td><textarea rows="3" type="text" class="FlavourText2" placeholder="FlavourText" style="overflow: hidden; resize: none; height: 65px;"></textarea>
+</td></tr><tr><td><input type="text" class="ItemImage2" placeholder="ItemImage: 圖片網址">
+</td></tr><tr><td><input type="text" class="ItemResize2" placeholder="ItemResize">
+<!--<tr><td><button type="reset" class="btn">清除</button>-->
+</td></tr></tbody></table>
+</form>
+</div>
+
+<br style="clear: both">
+
+<script>
+
+$(function() {
+	$('.ItemInput input[type="text"]').on('propertychange change keyup paste input', function() {
+		var classname = $(this).attr('class');
+		var name = classname.substr(0, classname.length-1);
+		var str = $(this).val().replace(/(?:\r\n|\r|\n)/g, '<br />');
+		str = bbcode_convert(str);
+		if ((name == "Requirements" || name == "ImplicitMod") && str == "") {
+			$('.'+name).next().hide();
+		} else {
+			$('.'+name).next().show();
+		}
+		if (name == "ItemImage") {
+			var a = document.createElement('a');
+			a.href = str;
+			var path = a.pathname;
+			var ext = path.substr( (path.lastIndexOf('.') +1) ).toLowerCase();
+			if (ext == "jpg" || ext == "png" || ext == "gif" || ext == "jpeg") {
+				//$('.'+name).html($("<img class='ItemImageInside' src='"+str+"'>"));
+				$('.'+name+'Inside').attr('src', str);
+				$('.'+name).show();
+			} else {
+				//$('.'+name).html("");
+				$('.'+name).hide();
+			}
+		} else if (name == "ItemResize") {
+			$('.ItemImageInside').css("width", str);
+			$('.ItemImageInside').css("height", str);
+		} else {
+			if (str == "") {
+				$('.'+name).hide();
+			} else {
+				$('.'+name).html(str);
+				$('.'+name).show();
+			}
+		}
+	});
+	$('.ItemInput textarea[type="text"]').on('propertychange change keyup paste input', function() {
+		var classname = $(this).attr('class');
+		var name = classname.substr(0, classname.length-1);
+		var str = $(this).val().replace(/(?:\r\n|\r|\n)/g, '<br />');
+		str = bbcode_convert(str);
+		if ((name == "ItemStats" || name == "ExplicitMod") && str == "") {
+			$('.'+name).next().hide();
+			$('.'+name).hide();
+		} else {
+			$('.'+name).next().show();
+			$('.'+name).show();
+			$('.'+name).html(str);
+		}
+	});
+	$('.ItemInput textarea').autogrow({onInitialize: true});
+
+	var lang = window.location.pathname.substr(0, 4);
+	if (lang == "/us/") {
+		$('input.ItemName2').val("Hairdryer").change();
+		$('input.ItemType2').val("Eternal Sword").change();
+		$('textarea.ItemStats2').val("One Handed Sword\nPhysical Damage: [w]63–104[/w]\nElemental Damage: [r]28–40[/r], [b]28–40[/b], [y]1–70[/y]\nChaos Damage: [p]28–40[/p]\nCritical Strike Chance: [w]5%[/w]\nAttacks per Second: [a]1.56[/a]").change();
+		$('input.Requirements2').val("Requires Level [w]64[/w], [w]113[/w] Str, [w]113[/w] Dex").change();
+		$('input.ImplicitMod2').val("18% Increased Accuracy Rating").change();
+		$('textarea.ExplicitMod2').val("160% Increased Physical Damage\nAdds 24-48 Fire Damage\nAdds 1-96 Lightning Damage\n20% Increased Attack Speed\n+40% to Cold Resistance").change();
+		$('textarea.FlavourText2').val("Babarians Hate\n Wet Hair\n At Any Time").change();
+		$('input.ItemImage2').val("http://webcdn.pathofexile.com/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/OneHandSword7Unique.png").change();
+		$('input.ItemResize2').val("30%").change();
+		$('.SiteInfo').html("poedb.tw/us/item-gen.php");
+	} else {
+		$('input.ItemName2').val("瓦爾戰刃").change();
+		$('input.ItemType2').val("瓦爾軍刃").change();
+		$('textarea.ItemStats2').val("單手劍\n物理傷害: [w]63–104[/w]\n元素傷害: [r]28–40[/r], [b]28–40[/b], [y]1–70[/y]\n混沌傷害: [p]28–40[/p]\n暴擊率: [w]5%[/w]\n每秒攻擊速度: [a]1.56[/a]").change();
+		$('input.Requirements2').val("需求等級 [w]64[/w], 力量 [w]113[/w], 敏捷 [w]113[/w]").change();
+		$('input.ImplicitMod2').val("增加 18% 命中率").change();
+		$('textarea.ExplicitMod2').val("附加 (19-31 to 28-40) 物理傷害\n附加 (19-31 to 28-40) 火焰傷害\n附加 (19-31 to 28-40) 冰冷傷害\n附加 (1-50 to 1-70) 閃電傷害\n附加 (19-31 to 28-40) 混沌傷害\n增加 (10 to 20)% 攻擊速度").change();
+		$('textarea.FlavourText2').val("瓦爾對外族一向以和為貴，\n 但如有人膽敢冒犯，必將施予無赦懲戒。」\n - 帝國學者伊席厄斯．普蘭德斯").change();
+		$('input.ItemImage2').val("http://webcdn.pathofexile.com/image/Art/2DItems/Weapons/OneHandWeapons/OneHandSwords/OneHandSword7Unique.png").change();
+		$('input.ItemResize2').val("40%").change();
+		$('.SiteInfo').html("poedb.tw/item-gen.php");
+	}
+});
+
+function bbcode_convert($str)
+{
+	$format_search =  [
+		/\[r\](.*?)\[\/r\]/ig,
+		/\[y\](.*?)\[\/y\]/ig,
+		/\[b\](.*?)\[\/b\]/ig,
+		/\[p\](.*?)\[\/p\]/ig,
+		/\[w\](.*?)\[\/w\]/ig,
+		/\[a\](.*?)\[\/a\]/ig
+	]; // note: NO comma after the last entry
+
+	$format_replace = [
+		'<span class="FireDamage">$1</span>',
+		'<span class="LightningDamage">$1</span>',
+		'<span class="ColdDamage">$1</span>',
+		'<span class="ChaosDamage">$1</span>',
+		'<span class="Default">$1</span>',
+		'<span class="Augmented">$1</span>'
+	];
+
+	for (var i =0;i<$format_search.length;i++) {
+	  	$str = $str.replace($format_search[i], $format_replace[i]);
+	}
+	return $str;
+}
+
+
+</script>
+
+      <div class="well">
+		<p>Your stash can be used to move items between your characters.</p>
+      </div><hr><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC-市集-物品市集-RWD -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1147735435341531" data-ad-slot="1504126405" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr>
+© 2014-2016. This site is fan-made and not affiliated with <a href="http://www.pathofexile.com/forum" target="_blank">Grinding Gear Games</a> and <a href="http://web.poe.garena.tw/" target="_blank">Garena</a> in any way. v2.4.0.17 2016/09/16. 123792
+    </div>
     </h2>
 
   </body>
