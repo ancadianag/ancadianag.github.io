@@ -1,0 +1,627 @@
+#debug_toggle {
+	background-color: #ccc; padding: 5px 10px;
+}
+#debug {
+	border:1px solid black;
+}
+.itemstat {
+	float: left;
+	padding-right: 10px;
+}
+hr.clear {
+	clear: left;
+	width: 80%;
+	border: 0;
+}
+div.item {
+    width: 64;
+    height: 64;
+}
+A.gem_blue, .gem_blue {
+	color: darkblue;
+}
+A.gem_red, .gem_red {
+	color: darkred;
+}
+A.gem_green, .gem_green {
+	color: darkgreen;
+}
+A.item_common {
+	color: #111111;
+}
+A.item_magic,.item_magic {
+	color: #8888ff;
+}
+A.item_rare,.item_rare {
+	color: #f2c462;
+}
+A.item_currency,.item_currency {
+    color: #c8c8c8;
+}
+A.item_gem,.item_gem {
+	color:#1ba29b;
+}
+.craftedMods {
+    color: lightblue;
+}
+A.item_unique,.item_unique {
+	color: #af6025;
+}
+.item_legacy {
+	color: red;
+}
+div#guide {
+	background-color: #202020;
+	color: #E0E0E0;
+}
+div#guide a {
+	color: #E0E0E0;
+}
+input.stats {
+	border: 0;
+	color: #f6931f;
+	font-weight: bold;
+	width: 5em;
+}
+.gemletter {
+	font-size: 12pt;
+	font-family: monospace;
+	color: white;
+}
+.gemletter_red {
+	background-color: red;
+}
+.gemletter_blue {
+	background-color: blue;
+}
+.gemletter_green {
+	background-color: green;
+}
+.gemletter_white {
+	background-color: black;
+}
+.input_value {
+	width: 48px;
+}
+.mod_hl {
+	color: red;
+	font-weight: bold;
+}
+.mod_grey {
+	color: grey;
+}
+
+.query, .tags {
+    margin:10px 0;
+}
+.tags span {
+    border: 1px solid #DDD;
+    background: #EEE;
+    padding: 3px;
+    cursor:pointer;
+}
+
+
+/* bootstrap */
+body {
+  /*padding-top: 70px;*/
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+/* override bootstrap */
+.navbar-inverse .navbar-nav > li > a {
+	color: #ddd;
+}
+.nav > li > a {
+	padding: 15px 10px;
+}
+
+/* item */
+.itembox-currency {
+    background-image: url(icons/item_banner_currency.jpg);
+    background-repeat: no-repeat;
+	background-size: contain;
+    border: #c8c8c8 2px solid;
+    text-align: center;
+    color: grey;
+    width: 360px;
+    background-color: black;
+    font-family:"FontinSmallCaps","Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"å¾®è»Ÿæ­£é»‘é«”",sans-serif;
+}
+
+.itembox-normal {
+    background-image: url(icons/item_banner_normal.jpg);
+    background-repeat: no-repeat;
+	background-size: contain;
+    border: #c8c8c8 2px solid;
+    text-align: center;
+    color: grey;
+    width: 360px;
+    background-color: black;
+    font-family:"FontinSmallCaps","Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"å¾®è»Ÿæ­£é»‘é«”",sans-serif;
+}
+.itembox-magic {
+    background-image: url(icons/item_banner_magic.jpg);
+    background-repeat: no-repeat;
+	background-size: contain;
+    border: darkblue 2px solid;
+    text-align: center;
+    color: grey;
+    width: 360px;
+    background-color: black;
+    font-family:"FontinSmallCaps","Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"å¾®è»Ÿæ­£é»‘é«”",sans-serif;
+}
+.itembox-rare {
+    background-image: url(icons/item_banner_rare.jpg);
+    background-repeat: no-repeat;
+	background-size: contain;
+    border: #f2c462 2px solid;
+    text-align: center;
+    color: grey;
+    width: 360px;
+    background-color: black;
+    font-family:"FontinSmallCaps","Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"å¾®è»Ÿæ­£é»‘é«”",sans-serif;
+}
+.itembox-unique, .itembox-gem {
+    text-align: center;
+    color: grey;
+    width: 360px;
+    background-color: black;
+    font-family:"FontinSmallCaps","Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"å¾®è»Ÿæ­£é»‘é«”",sans-serif;
+}
+.itemboxstats {
+    width: 357px;
+}
+.text-value {
+    color: white;
+}
+.text-mod {
+    color: #8888ff;
+}
+.text-flavour {
+    color: #af6025;
+    font-style:italic;
+    display: block;
+}
+.itemboxstatsgroup {
+    display: block;
+}
+.text-lightning {
+    color: #ffd700;
+}
+.text-fire {
+    color: #960000;
+}
+.text-cold {
+    color: #366492;
+}
+.text-chaos {
+    color: #d02090;
+}
+.itemboximage {
+    display: block;
+}
+.text-gem {
+	color: #1ba29b;
+}
+
+@font-face {
+    font-family: 'FontinSmallCaps';
+    src: url('http://webcdn.pathofexile.com/font/fontin-smallcaps-webfont.eot');
+    src: local("?"), url('http://webcdn.pathofexile.com/font/fontin-smallcaps-webfont.woff') format("woff"), url('http://webcdn.pathofexile.com/font/fontin-smallcaps-webfont.ttf') format("truetype"), url('http://webcdn.pathofexile.com/font/fontin-smallcaps-webfont.svg#webfontSCusr8QL') format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+.ItemGen{
+    margin:0;
+    color:#AB9066;
+    font-family:"FontinSmallCaps","Fontin SmallCapsa","Helvetica Neue",Helvetica,Arial,"å¾®è»Ÿæ­£é»‘é«”",sans-serif;
+    background:#222319;
+    font-weight:normal;
+	float: left;
+	max-width: 400px;
+}
+.ItemGen td {
+	padding: 10px;
+}
+.ItemContainer{
+	position:relative;
+	margin-bottom:0px;
+	font-size:100%;
+	font-weight:normal;
+}
+.ItemBox{text-align:center;color:#EFEFEF;font-size:1.0em;background:url('http://webcdn.pathofexile.com/image/game_ui/hover_background.png');}
+.ItemContent{padding-left:11px;padding-right:11px;padding-bottom:7px;}
+/* Unique */
+.TitleUniqueBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderUniqueMiddle.png?scale=1');
+	height:53px;
+}
+.TitleUniqueBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderUniqueLeft.png?scale=1') no-repeat top left;
+    height:53px;
+    width:43px;
+	left:0px;
+	position:absolute;
+}
+.ItemUniqueSeparator{
+	background:center no-repeat;
+	position:relative;
+	background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorUnique.png?scale=1');
+	height:7.91075px;
+	margin:1px 0px;
+}
+.TitleUniqueBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderUniqueRight.png?scale=1');
+    height:53px;
+	width:43px;
+	right:0px;
+	position:absolute;
+}
+.TextUnique,.FlavourText{
+	color:#af6025;
+}
+/* Gem */
+.TitleGemBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderGemMiddle.png?scale=1');
+	height:34px;
+}
+.TitleGemBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderGemLeft.png?scale=1') no-repeat top left;
+    height:34px;
+    width:29px;
+	left:0px;
+	position:absolute;
+}
+.TitleGemBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderGemRight.png?scale=1');
+    height:34px;
+	width:29px;
+	right:0px;
+	position:absolute;
+}
+.ItemGemSeparator{
+	background:center no-repeat;
+	position:relative;
+	background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorGem.png?scale=1');
+	height:7.91075px;
+	margin:1px 0px;
+}
+.TextGem{
+	color:#1ba29b
+}
+/* Normal */
+.TitleNormalBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderWhiteMiddle.png?scale=1');
+	height:34px;
+}
+.TitleNormalBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderWhiteLeft.png?scale=1') no-repeat top left;
+    height:34px;
+    width:29px;
+	left:0px;
+	position:absolute;
+}
+.TitleNormalBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderWhiteRight.png?scale=1');
+    height:34px;
+	width:29px;
+	right:0px;
+	position:absolute;
+}
+.ItemNormalSeparator{
+    background:center no-repeat;
+    position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorWhite.png?scale=1');
+    height:7.91075px;
+    margin:1px 0px;
+}
+/* Currency */
+.TitleCurrencyBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderCurrencyMiddle.png?scale=1');
+	height:34px;
+}
+.TitleCurrencyBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderCurrencyLeft.png?scale=1') no-repeat top left;
+    height:34px;
+    width:29px;
+	left:0px;
+	position:absolute;
+}
+.TitleCurrencyBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderCurrencyRight.png?scale=1');
+    height:34px;
+	width:29px;
+	right:0px;
+	position:absolute;
+}
+.ItemCurrencySeparator{
+    background:center no-repeat;
+    position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorCurrency.png?scale=1');
+    height:7.91075px;
+    margin:1px 0px;
+}
+/* Prophecy */
+.TitleProphecyBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderProphecyMiddle.png?scale=1');
+	height:34px;
+}
+.TitleProphecyBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderProphecyLeft.png?scale=1') no-repeat top left;
+    height:34px;
+    width:29px;
+	left:0px;
+	position:absolute;
+}
+.TitleProphecyBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderProphecyRight.png?scale=1');
+    height:34px;
+	width:29px;
+	right:0px;
+	position:absolute;
+}
+.ItemProphecySeparator{
+    background:center no-repeat;
+    position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorProphecy.png?scale=1');
+    height:7.91075px;
+    margin:1px 0px;
+}
+.TextProphecy{
+	color:#b54bff;
+}
+/* Magic */
+.TitleMagicBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderMagicMiddle.png?scale=1');
+	height:34px;
+}
+.TitleMagicBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderMagicLeft.png?scale=1') no-repeat top left;
+    height:34px;
+    width:29px;
+	left:0px;
+	position:absolute;
+}
+.TitleMagicBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderMagicRight.png?scale=1');
+    height:34px;
+	width:29px;
+	right:0px;
+	position:absolute;
+}
+.ItemMagicSeparator{
+    background:center no-repeat;
+    position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorMagic.png');
+    height:7.91075px;
+    margin:1px 0px;
+}
+.TextMagic {
+	color: #8888ff;
+}
+/* Rare */
+.TitleRareBar{
+    background:top left repeat-x;
+	position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderRareMiddle.png?scale=1');
+	height:34px;
+}
+.TitleRareBarL {
+    background:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderRareLeft.png?scale=1') no-repeat top left;
+    height:34px;
+    width:29px;
+	left:0px;
+	position:absolute;
+}
+.TitleRareBarR{
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsHeaderRareRight.png?scale=1');
+    height:34px;
+	width:29px;
+	right:0px;
+	position:absolute;
+}
+.ItemRareSeparator{
+    background:center no-repeat;
+    position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorRare.png');
+    height:7.91075px;
+    margin:1px 0px;
+}
+.TextRare{
+	color: #f2c462;
+}
+
+.ProphecyDescriptionText {
+	color: white;
+}
+.ItemName, .ItemType{
+	font-size:18px;
+	position:relative;
+	top:2px;
+}
+.ItemStats {padding-top:3px;}
+.ExplicitMod,.ImplicitMod{color:#8888FF;white-space:nowrap}
+.GemImplicitMod{color:#1ba29b}
+.FlavourText{
+	font-style:italic;
+	padding-left:5px; 
+	padding-right:5px;
+}
+.Text, .Requirements, .ItemStats{display:inline-block;padding:0 10px;color:#777;}
+.Default{color:#fff}
+.Augmented{color:#88f}
+.Unmet{color:#d20000}
+.PhysicalDamage{color:#fff}
+.FireDamage{color:#960000}
+.ColdDamage{color:#366492}
+.LightningDamage{color:gold}
+.ChaosDamage{color:#d02090}
+
+.ItemQuestSeparator{
+    background:center no-repeat;
+    position:relative;
+    background-image:url('http://webcdn.pathofexile.com/image/Art/2DArt/UIImages/InGame/ItemsSeparatorQuest.png');
+    height:7.91075px;
+    margin:1px 0px;
+}
+
+.qtip {
+	max-width: 362px;
+	/*font-size: 14px;*/
+	/*line-height: 17px;*/
+	font-size: inherit;
+	line-height: inherit;
+	background-color:black;
+}
+
+.qtip > .unique_img {
+	width: 50%;
+	height: 50%;
+}
+
+.qtip-content {
+	padding: 0px;
+}
+
+/* scroll to top */
+.scrollToTop{
+	width:64px; 
+	height:64px;
+	padding:0px; 
+	text-align:center; 
+	font-weight: bold;
+	position:fixed;
+	bottom:75px;
+	right:40px;
+	display:none;
+	background-alt: url('icons/Arrow-Up.png') no-repeat 0px 0px;
+	background: url('http://i.imgur.com/iD74AOp.png') no-repeat 0px 0px;
+	opacity:0.4;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+.tooltiptext { 
+	display: none; 
+	text-color: black;
+	background-color: white;
+}
+
+.xyz_verify {
+	cursor: pointer;
+	color: #428bca;
+}
+.xyz_verify:hover {
+	text-decoration: underline;
+}
+
+.separator {
+	position: relative;
+	height: 5px;
+	top: -8px;
+}
+
+.mon_name {
+	font-weight: bold;
+	font-size: 18px;
+}
+.mon-normal {
+    width: 357px;
+	border: 1px solid #aaa;
+	background: black;
+	color: grey;
+}
+.strong {
+	font-weight: bold;
+}
+.nodrop, A.nodrop {
+	text-decoration: line-through;
+	color: darkred;
+}
+
+.jqmWindow {
+    display: none;
+
+    position: fixed;
+    top: 17%;
+    left: 50%;
+
+    margin-left: -300px;
+    width: 600px;
+
+    background-color: #111;
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+}
+.jqmOverlay { 
+	background-color: #000; 
+}
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+.bs-example {
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+	border-style: solid;
+	padding-bottom: 10px;
+}
+
+.sortable {
+	cursor: pointer;
+}
+
+h4 {
+	border-bottom: 1px solid #aaa;
+}
+
+/* remove next version */
+.itemboxheader-single {
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+    width: 357px;
+    height: 30px;
+}
+.itemboxheader-double {
+    font-size: 20px;
+    line-height: 24px;
+    color: #af6025;
+    display: block;
+    width: 357px;
+    height: 50px;
+}
+
+
